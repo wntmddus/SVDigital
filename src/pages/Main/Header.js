@@ -48,7 +48,8 @@ const Header = ({
             <MenuItem divider />
             <MenuItem>Separated link</MenuItem>
           </NavDropdown>
-          <NavItem componentClass={Link} href={ROUTES.SIGN_UP} to={ROUTES.SIGN_UP} >Sign Up</NavItem>
+            <NavItem componentClass={Link} href={ROUTES.SIGN_UP} to={ROUTES.SIGN_UP} >Sign Up</NavItem>
+            <NavItem componentClass={Link} href={ROUTES.SIGN_IN} to={ROUTES.SIGN_IN} >Sign In</NavItem>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
