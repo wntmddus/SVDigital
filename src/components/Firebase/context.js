@@ -1,5 +1,4 @@
 import React from 'react';
-import {SignUpForm} from "../../pages/Authentication/SignUp";
 
 const FirebaseContext = React.createContext(null);
 

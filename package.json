@@ -54,7 +54,7 @@
     "react-notification-system": "^0.2.15",
     "react-redux": "^5.0.6",
     "react-router-dom": "^5.0.1",
-    "recompose": "^0.30.0",
+    "recompose": "^0.27.1",
     "redux": "^3.7.2",
     "redux-form": "^7.0.4",
     "redux-logger": "^3.0.6",
