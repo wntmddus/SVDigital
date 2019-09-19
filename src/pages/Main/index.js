@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import cx from 'classnames';
 import { setMobileNavVisibility } from '../../reducers/Layout';
 import { withRouter } from 'react-router-dom';
+import * as ROUTES from  '../../routes';
 
 import Header from './Header';
 import Footer from './Footer';
@@ -39,21 +40,19 @@ const Main = ({
     })}>
       <div className="wrapper">
         <div className="close-layer" onClick={hideMobileMenu}></div>
-        <SideBar />
         <Router>
+          <SideBar />
           <div className="main-panel">
             <Header />
-            <Switch>
-              <Route exact path="/" component={Dashboard} />
-              <Route path="/sign-up" component={SignUpPage} />
-              <Route path="/components" component={Components} />
-              <Route path="/profile" component={UserProfile} />
-              <Route path="/forms" component={Forms} />
-              <Route path="/tables" component={Tables} />
-              <Route path="/maps" component={MapsPage} />
-              <Route path="/charts" component={Charts} />
-              <Route path="/calendar" component={Calendar} />
-            </Switch>
+            <Route exact href="/" path="/" component={Dashboard} />
+            <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+            <Route path="/components" component={Components} />
+            <Route path="/profile" component={UserProfile} />
+            <Route path="/forms" component={Forms} />
+            <Route path="/tables" component={Tables} />
+            <Route path="/maps" component={MapsPage} />
+            <Route path="/charts" component={Charts} />
+            <Route path="/calendar" component={Calendar} />
             <Footer />
           </div>
         </Router>
