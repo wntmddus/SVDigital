@@ -1,4 +1,4 @@
-# Crystal React Bootstrap Dashboard
+# SVDigital Web Application
 
 ![Crystal Dashboard](https://user-images.githubusercontent.com/1154740/31934597-c2b055dc-b8d6-11e7-869d-48e6f8992718.png)
 
@@ -112,7 +112,7 @@ npm run build
 │   │   ├── RegularForms
 │   │   │   ├── FormElements.js
 │   │   │   ├── HorizontalForm.js
-│   │   │   ├── StackedForm.js
+│   │   │   ├── SignUpFormjs
 │   │   │   └── index.js
 │   │   ├── ValidationForms
 │   │   │   └── index.js

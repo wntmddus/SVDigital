@@ -2,6 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { toggleMobileNavVisibility } from '../../reducers/Layout';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, FormGroup, FormControl } from 'react-bootstrap';
+import StackedForm from "../Forms/RegularForms/StackedForm";
+import { Route, Link } from "react-router-dom";
+import * as ROUTES from  '../../routes';
 
 const Header = ({
   showMobileMenu,
@@ -45,7 +48,7 @@ const Header = ({
             <MenuItem divider />
             <MenuItem>Separated link</MenuItem>
           </NavDropdown>
-          <NavItem>Log out</NavItem>
+          <NavItem componentClass={Link} href={ROUTES.SIGN_UP} to={ROUTES.SIGN_UP} >Sign Up</NavItem>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
