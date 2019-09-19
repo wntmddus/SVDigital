@@ -22,7 +22,8 @@ import Forms from '../Forms';
 import Charts from '../Charts';
 import Calendar from '../Calendar';
 import Tables from '../Tables';
-import SignUpPage from "../Authentication/SignUp";
+import SignUpPage from '../Authentication/SignUp';
+import SignInPage from '../Authentication/SignIn';
 
 const Main = ({
   mobileNavVisibility,
@@ -46,6 +47,7 @@ const Main = ({
             <Header />
             <Route exact href="/" path="/" component={Dashboard} />
             <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+            <Route path={ROUTES.SIGN_IN} component={SignInPage} />
             <Route path="/components" component={Components} />
             <Route path="/profile" component={UserProfile} />
             <Route path="/forms" component={Forms} />
