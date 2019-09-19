@@ -18,9 +18,7 @@ const renderApp = Component => {
   ReactDOM.render(
       <Provider store={store}>
         <FirebaseContext.Provider value={new Firebase()}>
-            <Router>
-                <Component />
-            </Router>
+            <Component />
         </FirebaseContext.Provider>
       </Provider>,
     rootElement

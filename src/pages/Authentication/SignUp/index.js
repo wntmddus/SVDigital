@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { FirebaseContext } from '../../../components/Firebase';
-import { Route, Link, withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { compose } from 'recompose';
 import { withFirebase } from "../../../components/Firebase";
 import * as ROUTES from  '../../../routes';
