@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Router } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import cx from 'classnames';
 import { setMobileNavVisibility } from '../../reducers/Layout';
@@ -21,6 +21,7 @@ import Forms from '../Forms';
 import Charts from '../Charts';
 import Calendar from '../Calendar';
 import Tables from '../Tables';
+import SignUpPage from "../Authentication/SignUp";
 
 const Main = ({
   mobileNavVisibility,
@@ -28,10 +29,10 @@ const Main = ({
   history
 }) => {
   history.listen(() => {
-    if (mobileNavVisibility === true) {
-      hideMobileMenu();
-    }
-  });
+      if (mobileNavVisibility === true) {
+        hideMobileMenu();
+      }
+    });
   return (
     <div className={cx({
       'nav-open': mobileNavVisibility === true
@@ -39,19 +40,23 @@ const Main = ({
       <div className="wrapper">
         <div className="close-layer" onClick={hideMobileMenu}></div>
         <SideBar />
-
-        <div className="main-panel">
-          <Header />
-          <Route exact path="/" component={Dashboard} />
-          <Route path="/components" component={Components} />
-          <Route path="/profile" component={UserProfile} />
-          <Route path="/forms" component={Forms} />
-          <Route path="/tables" component={Tables} />
-          <Route path="/maps" component={MapsPage} />
-          <Route path="/charts" component={Charts} />
-          <Route path="/calendar" component={Calendar} />
-          <Footer />
-        </div>
+        <Router>
+          <div className="main-panel">
+            <Header />
+            <Switch>
+              <Route exact path="/" component={Dashboard} />
+              <Route path="/sign-up" component={SignUpPage} />
+              <Route path="/components" component={Components} />
+              <Route path="/profile" component={UserProfile} />
+              <Route path="/forms" component={Forms} />
+              <Route path="/tables" component={Tables} />
+              <Route path="/maps" component={MapsPage} />
+              <Route path="/charts" component={Charts} />
+              <Route path="/calendar" component={Calendar} />
+            </Switch>
+            <Footer />
+          </div>
+        </Router>
       </div>
     </div>
   )
